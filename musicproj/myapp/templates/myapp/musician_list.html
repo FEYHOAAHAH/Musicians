@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ genre.name }} Musicians</title>
+</head>
+<body>
+    <h1>{{ genre.name }} Musicians</h1>
+    <ul>
+        {% for musician in musicians %}
+            <li><a href="{% url 'musician_detail' musician_id=musician.id %}">{{ musician.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
